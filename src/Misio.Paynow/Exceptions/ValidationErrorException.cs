@@ -1,10 +1,8 @@
 ﻿namespace Misio.Paynow.Exceptions
 {
-    public class ValidationErrorException : PaynowBaseException
+    public class ValidationErrorException : PaynowException
     {
-        public override string Code => "VALIDATION_ERROR";
-
-        public ValidationErrorException() : base("Payment request was formulated incorrectly.")
+        public ValidationErrorException() : base(ErrorCodes.VALIDATION_ERROR, "Payment request was formulated incorrectly.")
         {
         }
     }

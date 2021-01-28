@@ -1,10 +1,8 @@
 ﻿namespace Misio.Paynow.Exceptions
 {
-    public class PaymentAmountTooLargeException : PaynowBaseException
+    public class PaymentAmountTooLargeException : PaynowException
     {
-        public override string Code => "PAYMENT_AMOUNT_TOO_LARGE";
-
-        public PaymentAmountTooLargeException() : base("Maximum amount of the payment is too large.")
+        public PaymentAmountTooLargeException() : base(ErrorCodes.PAYMENT_AMOUNT_TOO_LARGE, "Maximum amount of the payment is too large.")
         {
         }
     }

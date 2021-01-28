@@ -1,10 +1,8 @@
 ﻿namespace Misio.Paynow.Exceptions
 {
-    public class UnauthorizedException : PaynowBaseException
+    public class UnauthorizedException : PaynowException
     {
-        public override string Code => "UNAUTHORIZED";
-
-        public UnauthorizedException() : base("You are not authorized for this operation.")
+        public UnauthorizedException() : base(ErrorCodes.UNAUTHORIZED, "You are not authorized for this operation.")
         {
         }
     }

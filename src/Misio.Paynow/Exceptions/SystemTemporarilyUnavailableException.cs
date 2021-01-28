@@ -1,10 +1,8 @@
 ﻿namespace Misio.Paynow.Exceptions
 {
-    public class SystemTemporarilyUnavailableException : PaynowBaseException
+    public class SystemTemporarilyUnavailableException : PaynowException
     {
-        public override string Code => "SYSTEM_TEMPORARILY_UNAVAILABLE";
-
-        public SystemTemporarilyUnavailableException() : base("Our Paynow system is temporarily unavailable.")
+        public SystemTemporarilyUnavailableException() : base(ErrorCodes.SYSTEM_TEMPORARILY_UNAVAILABLE, "Our Paynow system is temporarily unavailable.")
         {
         }
     }

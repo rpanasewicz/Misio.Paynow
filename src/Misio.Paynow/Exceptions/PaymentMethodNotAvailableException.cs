@@ -1,10 +1,8 @@
 ﻿namespace Misio.Paynow.Exceptions
 {
-    public class PaymentMethodNotAvailableException : PaynowBaseException
+    public class PaymentMethodNotAvailableException : PaynowException
     {
-        public override string Code => "PAYMENT_METHOD_NOT_AVAILABLE";
-
-        public PaymentMethodNotAvailableException() : base("Chosen payment method is not available.")
+        public PaymentMethodNotAvailableException() : base(ErrorCodes.PAYMENT_METHOD_NOT_AVAILABLE, "Chosen payment method is not available.")
         {
         }
     }

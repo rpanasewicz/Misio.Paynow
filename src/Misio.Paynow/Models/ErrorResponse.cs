@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Misio.Paynow.Models
 {
@@ -22,6 +23,11 @@ namespace Misio.Paynow.Models
             {
                 ErrorType = errorType;
                 Message = message;
+            }
+
+            internal void Deconstruct(out string ErrorType, out string Message)
+            {
+                throw new NotImplementedException();
             }
         }
     }
