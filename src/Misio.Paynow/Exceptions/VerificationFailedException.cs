@@ -8,4 +8,13 @@
         {
         }
     }
+
+    public class UnknowErrorException : PaynowBaseException
+    {
+        public override string Code => "Unknow error.";
+
+        public UnknowErrorException() : base("Unknow error.")
+        {
+        }
+    }
 }
